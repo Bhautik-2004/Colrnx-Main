@@ -766,7 +766,8 @@ function CommunityPage() {
 
                 <div className="grid grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold mb-2">Group Details</h4>
+                    <h4 className="font-semibol
+d mb-2">Group Details</h4>
                     <ul className="space-y-2 text-light-text-secondary dark:text-dark-text-secondary">
                       <li className="flex items-center gap-2">
                         <Clock className="w-4 h-4" />
@@ -813,5 +814,3 @@ function CommunityPage() {
 }
 
 export default CommunityPage;
-
-export default CommunityPage
