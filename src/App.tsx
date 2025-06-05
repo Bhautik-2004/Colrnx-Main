@@ -4,6 +4,7 @@ import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import DashboardPage from './pages/DashboardPage';
 import ProjectsPage from './pages/ProjectsPage';
+import ProjectDetailsPage from './pages/ProjectDetailsPage';
 import CommunityPage from './pages/CommunityPage';
 import CoursesPage from './pages/CoursesPage';
 import ExploreResourcesPage from './pages/ExploreResourcesPage';
@@ -56,6 +57,11 @@ function App() {
         <Route path="/projects" element={
           <ProtectedRoute>
             <ProjectsPage />
+          </ProtectedRoute>
+        } />
+        <Route path="/projects/:id" element={
+          <ProtectedRoute>
+            <ProjectDetailsPage />
           </ProtectedRoute>
         } />
         <Route path="/community" element={
