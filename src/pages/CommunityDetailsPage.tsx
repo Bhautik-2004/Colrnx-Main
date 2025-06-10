@@ -471,7 +471,11 @@ function CommunityDetailsPage() {
                       value={newPost.link_url}
                       onChange={(e) => setNewPost({ ...newPost, link_url: e.target.value })}
                       placeholder="Link URL (optional)"
+<<<<<<< HEAD
                       className="flex-1 px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+=======
+                      className="flex-1 px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+>>>>>>> upstream/main
                     />
                   </div>
 
@@ -656,7 +660,11 @@ function CommunityDetailsPage() {
                       {group.tags.map(tag => (
                         <span
                           key={tag}
+<<<<<<< HEAD
                           className="bg-gray-100 dark:bg-dark-border text-gray-800 dark:text-gray-200 px-2 py-1 rounded-full text-sm"
+=======
+                          className="bg-gray-100 dark:bg-dark-border text-gray-800 dark:text-gray-200 px-2 py-1 rounded-md text-sm"
+>>>>>>> upstream/main
                         >
                           {tag}
                         </span>
@@ -669,6 +677,7 @@ function CommunityDetailsPage() {
           </div>
 
           {/* Members List */}
+<<<<<<< HEAD
             <div className="card">
             <h2 className="text-xl font-semibold mb-4">Members</h2>
             <div className="space-y-4">
@@ -693,6 +702,29 @@ function CommunityDetailsPage() {
                 Joined {member.joined_at ? formatDate(member.joined_at) : ""}
                 </span>
               </div>
+=======
+          <div className="card">
+            <h2 className="text-xl font-semibold mb-4">Members</h2>
+            <div className="space-y-4">
+              {members.map(member => (
+                <div key={member.user_id} className="flex items-center justify-between">
+                  <div>
+                    <button
+                      type="button"
+                      className="font-medium text-primary-500 hover:underline focus:outline-none"
+                      onClick={() => navigate(`/portfolio/${member.user_id}`)}
+                    >
+                      {member.profiles?.name || "User"}
+                    </button>
+                    <p className="text-sm text-light-text-secondary dark:text-dark-text-secondary">
+                      {member.role === 'leader' ? 'Group Leader' : 'Member'}
+                    </p>
+                  </div>
+                  <span className="text-sm text-light-text-secondary dark:text-dark-text-secondary">
+                    Joined {member.joined_at ? formatDate(member.joined_at) : ""}
+                  </span>
+                </div>
+>>>>>>> upstream/main
               ))}
             </div>
           </div>

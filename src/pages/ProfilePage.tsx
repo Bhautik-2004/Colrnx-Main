@@ -268,7 +268,11 @@ function ProfilePage() {
                 <nav className="space-y-1">
                   <Link
                     to="/learn"
+<<<<<<< HEAD
                     className="w-full flex items-center px-4 py-2.5 rounded-full transition-colors hover:bg-gray-100 dark:hover:bg-dark-border"
+=======
+                    className="w-full flex items-center px-4 py-2.5 rounded-lg transition-colors hover:bg-gray-100 dark:hover:bg-dark-border"
+>>>>>>> upstream/main
                   >
                     <Layout className="w-5 h-5 mr-3" />
                     <span>Dashboard</span>
@@ -276,7 +280,11 @@ function ProfilePage() {
 
                   <button
                     onClick={() => setActiveTab('profile')}
+<<<<<<< HEAD
                     className={`w-full flex items-center px-4 py-2.5 rounded-full transition-colors ${
+=======
+                    className={`w-full flex items-center px-4 py-2.5 rounded-lg transition-colors ${
+>>>>>>> upstream/main
                       activeTab === 'profile'
                         ? 'bg-primary-50 dark:bg-primary-900/30 text-primary-500'
                         : 'hover:bg-gray-100 dark:hover:bg-dark-border'
@@ -288,7 +296,11 @@ function ProfilePage() {
                   
                   <button
                     onClick={() => setActiveTab('security')}
+<<<<<<< HEAD
                     className={`w-full flex items-center px-4 py-2.5 rounded-full transition-colors ${
+=======
+                    className={`w-full flex items-center px-4 py-2.5 rounded-lg transition-colors ${
+>>>>>>> upstream/main
                       activeTab === 'security'
                         ? 'bg-primary-50 dark:bg-primary-900/30 text-primary-500'
                         : 'hover:bg-gray-100 dark:hover:bg-dark-border'
@@ -300,7 +312,11 @@ function ProfilePage() {
                   
                   <button
                     onClick={() => setActiveTab('notifications')}
+<<<<<<< HEAD
                     className={`w-full flex items-center px-4 py-2.5 rounded-full transition-colors ${
+=======
+                    className={`w-full flex items-center px-4 py-2.5 rounded-lg transition-colors ${
+>>>>>>> upstream/main
                       activeTab === 'notifications'
                         ? 'bg-primary-50 dark:bg-primary-900/30 text-primary-500'
                         : 'hover:bg-gray-100 dark:hover:bg-dark-border'
@@ -312,7 +328,11 @@ function ProfilePage() {
                   
                   <button
                     onClick={() => setActiveTab('preferences')}
+<<<<<<< HEAD
                     className={`w-full flex items-center px-4 py-2.5 rounded-full transition-colors ${
+=======
+                    className={`w-full flex items-center px-4 py-2.5 rounded-lg transition-colors ${
+>>>>>>> upstream/main
                       activeTab === 'preferences'
                         ? 'bg-primary-50 dark:bg-primary-900/30 text-primary-500'
                         : 'hover:bg-gray-100 dark:hover:bg-dark-border'
@@ -324,7 +344,11 @@ function ProfilePage() {
                   
                   <button
                     onClick={() => setActiveTab('billing')}
+<<<<<<< HEAD
                     className={`w-full flex items-center px-4 py-2.5 rounded-full transition-colors ${
+=======
+                    className={`w-full flex items-center px-4 py-2.5 rounded-lg transition-colors ${
+>>>>>>> upstream/main
                       activeTab === 'billing'
                         ? 'bg-primary-50 dark:bg-primary-900/30 text-primary-500'
                         : 'hover:bg-gray-100 dark:hover:bg-dark-border'
@@ -336,7 +360,11 @@ function ProfilePage() {
                   
                   <button
                     onClick={() => setActiveTab('help')}
+<<<<<<< HEAD
                     className={`w-full flex items-center px-4 py-2.5 rounded-full transition-colors ${
+=======
+                    className={`w-full flex items-center px-4 py-2.5 rounded-lg transition-colors ${
+>>>>>>> upstream/main
                       activeTab === 'help'
                         ? 'bg-primary-50 dark:bg-primary-900/30 text-primary-500'
                         : 'hover:bg-gray-100 dark:hover:bg-dark-border'
@@ -350,7 +378,11 @@ function ProfilePage() {
                 <div className="mt-6 pt-6 border-t border-gray-200 dark:border-dark-border">
                   <button
                     onClick={logout}
+<<<<<<< HEAD
                     className="w-full flex items-center px-4 py-2.5 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 rounded-full transition-colors"
+=======
+                    className="w-full flex items-center px-4 py-2.5 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 rounded-lg transition-colors"
+>>>>>>> upstream/main
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
@@ -365,7 +397,11 @@ function ProfilePage() {
             <div className="lg:col-span-3">
               {/* Success/Error Message */}
               {message.text && (
+<<<<<<< HEAD
                 <div className={`mb-6 p-4 rounded-full ${
+=======
+                <div className={`mb-6 p-4 rounded-lg ${
+>>>>>>> upstream/main
                   message.type === 'success' 
                     ? 'bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400'
                     : 'bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400'
@@ -395,7 +431,11 @@ function ProfilePage() {
                             id="firstName"
                             value={profileData.firstName}
                             onChange={(e) => setProfileData({...profileData, firstName: e.target.value})}
+<<<<<<< HEAD
                             className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+=======
+                            className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+>>>>>>> upstream/main
                           />
                         </div>
                         
@@ -408,7 +448,11 @@ function ProfilePage() {
                             id="lastName"
                             value={profileData.lastName}
                             onChange={(e) => setProfileData({...profileData, lastName: e.target.value})}
+<<<<<<< HEAD
                             className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+=======
+                            className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+>>>>>>> upstream/main
                           />
                         </div>
                       </div>
@@ -422,7 +466,11 @@ function ProfilePage() {
                           id="email"
                           value={profileData.email}
                           disabled
+<<<<<<< HEAD
                           className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-gray-50 dark:bg-dark-border cursor-not-allowed"
+=======
+                          className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-gray-50 dark:bg-dark-border cursor-not-allowed"
+>>>>>>> upstream/main
                         />
                       </div>
                       
@@ -449,7 +497,11 @@ function ProfilePage() {
                           id="github"
                           value={profileData.github}
                           onChange={(e) => setProfileData({ ...profileData, github: e.target.value })}
+<<<<<<< HEAD
                           className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+=======
+                          className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+>>>>>>> upstream/main
                           placeholder="https://github.com/yourusername"
                         />
                       </div>
@@ -463,7 +515,11 @@ function ProfilePage() {
                           id="linkedin"
                           value={profileData.linkedin}
                           onChange={(e) => setProfileData({ ...profileData, linkedin: e.target.value })}
+<<<<<<< HEAD
                           className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+=======
+                          className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+>>>>>>> upstream/main
                           placeholder="https://linkedin.com/in/yourusername"
                         />
                       </div>
@@ -477,7 +533,11 @@ function ProfilePage() {
                           id="website"
                           value={profileData.website}
                           onChange={(e) => setProfileData({ ...profileData, website: e.target.value })}
+<<<<<<< HEAD
                           className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+=======
+                          className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+>>>>>>> upstream/main
                           placeholder="https://yourwebsite.com"
                         />
                       </div>
@@ -516,7 +576,11 @@ function ProfilePage() {
                           id="currentPassword"
                           value={securityData.currentPassword}
                           onChange={(e) => setSecurityData({...securityData, currentPassword: e.target.value})}
+<<<<<<< HEAD
                           className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+=======
+                          className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+>>>>>>> upstream/main
                           placeholder="••••••••"
                         />
                       </div>
@@ -530,7 +594,11 @@ function ProfilePage() {
                           id="newPassword"
                           value={securityData.newPassword}
                           onChange={(e) => setSecurityData({...securityData, newPassword: e.target.value})}
+<<<<<<< HEAD
                           className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+=======
+                          className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+>>>>>>> upstream/main
                           placeholder="••••••••"
                         />
                       </div>
@@ -544,7 +612,11 @@ function ProfilePage() {
                           id="confirmPassword"
                           value={securityData.confirmPassword}
                           onChange={(e) => setSecurityData({...securityData, confirmPassword: e.target.value})}
+<<<<<<< HEAD
                           className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+=======
+                          className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+>>>>>>> upstream/main
                           placeholder="••••••••"
                         />
                       </div>
@@ -693,7 +765,11 @@ function ProfilePage() {
                           id="learningGoal"
                           value={preferences.learningGoal}
                           onChange={(e) => setPreferences({...preferences, learningGoal: e.target.value})}
+<<<<<<< HEAD
                           className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+=======
+                          className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+>>>>>>> upstream/main
                         >
                           <option value="">Select your goal</option>
                           <option value="career-change">Career Change</option>
@@ -711,7 +787,11 @@ function ProfilePage() {
                           id="primaryInterest"
                           value={preferences.primaryInterest}
                           onChange={(e) => setPreferences({...preferences, primaryInterest: e.target.value})}
+<<<<<<< HEAD
                           className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+=======
+                          className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+>>>>>>> upstream/main
                         >
                           <option value="">Select your field</option>
                           <option value="frontend">Frontend Development</option>
@@ -731,7 +811,11 @@ function ProfilePage() {
                           id="weeklyHours"
                           value={preferences.weeklyHours}
                           onChange={(e) => setPreferences({...preferences, weeklyHours: e.target.value})}
+<<<<<<< HEAD
                           className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+=======
+                          className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+>>>>>>> upstream/main
                         >
                           <option value="">Select hours</option>
                           <option value="0-5">Less than 5 hours</option>
@@ -809,7 +893,11 @@ function ProfilePage() {
                   </div>
                   
                   <div className="p-6">
+<<<<<<< HEAD
                     <div className="flex items-center justify-between p-4 bg-primary-50 dark:bg-primary-900/30 rounded-full mb-8">
+=======
+                    <div className="flex items-center justify-between p-4 bg-primary-50 dark:bg-primary-900/30 rounded-lg mb-8">
+>>>>>>> upstream/main
                       <div>
                         <h3 className="font-semibold">Current Plan: Free</h3>
                         <p className="text-light-text-secondary dark:text-dark-text-secondary text-sm">
@@ -823,7 +911,11 @@ function ProfilePage() {
                     
                     <div className="mb-8">
                       <h3 className="font-semibold mb-4">Payment Methods</h3>
+<<<<<<< HEAD
                       <div className="border border-gray-200 dark:border-dark-border rounded-full p-4">
+=======
+                      <div className="border border-gray-200 dark:border-dark-border rounded-lg p-4">
+>>>>>>> upstream/main
                         <p className="text-center text-light-text-secondary dark:text-dark-text-secondary">
                           No payment methods added
                         </p>
@@ -872,7 +964,11 @@ function ProfilePage() {
                     <h3 className="font-semibold mb-4">Frequently Asked Questions</h3>
                     
                     <div className="space-y-4">
+<<<<<<< HEAD
                       <div className="border border-gray-200 dark:border-dark-border rounded-full overflow-hidden">
+=======
+                      <div className="border border-gray-200 dark:border-dark-border rounded-lg overflow-hidden">
+>>>>>>> upstream/main
                         <button className="w-full flex items-center justify-between p-4 text-left font-medium">
                           <span>How do I reset my password?</span>
                           <ChevronRight className="w-5 h-5 transform rotate-90" />
@@ -884,21 +980,33 @@ function ProfilePage() {
                         </div>
                       </div>
                       
+<<<<<<< HEAD
                       <div className="border border-gray-200 dark:border-dark-border rounded-full overflow-hidden">
+=======
+                      <div className="border border-gray-200 dark:border-dark-border rounded-lg overflow-hidden">
+>>>>>>> upstream/main
                         <button className="w-full flex items-center justify-between p-4 text-left font-medium">
                           <span>How do I cancel my subscription?</span>
                           <ChevronRight className="w-5 h-5" />
                         </button>
                       </div>
                       
+<<<<<<< HEAD
                       <div className="border border-gray-200 dark:border-dark-border rounded-full overflow-hidden">
+=======
+                      <div className="border border-gray-200 dark:border-dark-border rounded-lg overflow-hidden">
+>>>>>>> upstream/main
                         <button className="w-full flex items-center justify-between p-4 text-left font-medium">
                           <span>Can I download courses for offline viewing?</span>
                           <ChevronRight className="w-5 h-5" />
                         </button>
                       </div>
                       
+<<<<<<< HEAD
                       <div className="border border-gray-200 dark:border-dark-border rounded-full overflow-hidden">
+=======
+                      <div className="border border-gray-200 dark:border-dark-border rounded-lg overflow-hidden">
+>>>>>>> upstream/main
                         <button className="w-full flex items-center justify-between p-4 text-left font-medium">
                           <span>How do I get a certificate of completion?</span>
                           <ChevronRight className="w-5 h-5" />

@@ -8,11 +8,14 @@ import { useSearchFilter } from '../hooks/useSearchFilter';
 import { useAuth } from '../context/AuthContext';
 import { supabase } from '../lib/supabase';
 
+<<<<<<< HEAD
 const predefinedTags = [
   "JavaScript", "TypeScript", "Python", "Java", "C#", "C++", "C", "Go", "Rust", "Ruby",
   "PHP", "Swift", "Kotlin", "Scala", "Dart", "Objective-C", "Perl", "Haskell", "Elixir", "MATLAB"
 ];
 
+=======
+>>>>>>> upstream/main
 interface StudyGroup {
   id: string;
   title: string;
@@ -58,6 +61,7 @@ function CommunityPage() {
     tags: [] as string[]
   });
 
+<<<<<<< HEAD
   const [searchTerm, setSearchTerm] = useState('');
   const [filter, setFilter] = useState({
     level: '',
@@ -88,6 +92,9 @@ function CommunityPage() {
       // Add more sort options if needed
       return 0;
     });
+=======
+  const filteredGroups = useSearchFilter(exploreCommunities, ['title', 'description', 'tags']);
+>>>>>>> upstream/main
 
   const getDifficultyColor = (level: string) => {
     switch (level) {
@@ -358,6 +365,7 @@ function CommunityPage() {
             <p className="text-light-text-secondary dark:text-dark-text-secondary">
               Join study groups and connect with other learners
             </p>
+<<<<<<< HEAD
             {/* Search and Filter moved here */}
             <div className="flex flex-col md:flex-row gap-4 mt-4">
               <SearchBar
@@ -375,6 +383,8 @@ function CommunityPage() {
                 onChange={setFilter}
               />
             </div>
+=======
+>>>>>>> upstream/main
           </div>
           <button
             onClick={() => {
@@ -479,6 +489,21 @@ function CommunityPage() {
       </div>
 
       <div>
+<<<<<<< HEAD
+=======
+        <div className="flex flex-col md:flex-row gap-4 mb-8">
+          <h2 className="text-2xl font-bold">Explore Communities</h2>
+          <SearchBar placeholder="Search study groups..." />
+          <FilterBar 
+            options={{
+              levels: ['beginner', 'intermediate', 'advanced'],
+              categories: ['programming', 'web-development', 'data-science', 'mobile-dev'],
+              sortOptions: ['newest', 'popular']
+            }}
+          />
+        </div>
+
+>>>>>>> upstream/main
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredGroups.map(group => (
             <div key={group.id} className="card hover:shadow-lg transition-all duration-300">
@@ -692,6 +717,7 @@ function CommunityPage() {
 
                 <div>
                   <label htmlFor="tags" className="block text-sm font-medium mb-1">
+<<<<<<< HEAD
                     Tags (click to add or type and press Enter)
                   </label>
                   <div className="flex flex-wrap gap-2 mb-2">
@@ -719,13 +745,21 @@ function CommunityPage() {
                       );
                     })}
                   </div>
+=======
+                    Tags (Press Enter to add)
+                  </label>
+>>>>>>> upstream/main
                   <input
                     type="text"
                     id="tags"
                     onKeyDown={handleTagInput}
                     className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+<<<<<<< HEAD
                     placeholder="Type and press Enter to add custom tag"
                     autoComplete="off"
+=======
+                    placeholder="e.g., JavaScript, React"
+>>>>>>> upstream/main
                   />
                   <div className="flex flex-wrap gap-2 mt-2">
                     {groupForm.tags.map(tag => (

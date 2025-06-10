@@ -8,11 +8,14 @@ import { useSearchFilter } from '../hooks/useSearchFilter';
 import { useAuth } from '../context/AuthContext';
 import { supabase } from '../lib/supabase';
 
+<<<<<<< HEAD
 const predefinedTags = [
   "JavaScript", "TypeScript", "Python", "Java", "C#", "C++", "C", "Go", "Rust", "Ruby",
   "PHP", "Swift", "Kotlin", "Scala", "Dart", "Objective-C", "Perl", "Haskell", "Elixir", "MATLAB"
 ];
 
+=======
+>>>>>>> upstream/main
 interface Project {
   id: string;
   title: string;
@@ -46,12 +49,15 @@ function ProjectsPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
   const [isEditing, setIsEditing] = useState(false);
+<<<<<<< HEAD
   const [searchTerm, setSearchTerm] = useState('');
   const [filter, setFilter] = useState({
     difficulty: '',
     categories: [],
     sort: ''
   });
+=======
+>>>>>>> upstream/main
   
   const [projectForm, setProjectForm] = useState({
     title: '',
@@ -359,6 +365,7 @@ function ProjectsPage() {
           <div>
             <h1 className="text-3xl font-bold mb-2">Projects</h1>
             <p className="text-light-text-secondary dark:text-dark-text-secondary">
+<<<<<<< HEAD
               Discover, join, and manage collaborative learning projects.
             </p>
             {/* Move Search and Filter here */}
@@ -378,6 +385,10 @@ function ProjectsPage() {
                 onChange={setFilter}
               />
             </div>
+=======
+              Build your portfolio with real-world projects and collaborate with other learners.
+            </p>
+>>>>>>> upstream/main
           </div>
           <button
             onClick={() => {
@@ -396,7 +407,11 @@ function ProjectsPage() {
             className="btn-primary flex items-center gap-2"
           >
             <Plus className="w-5 h-5" />
+<<<<<<< HEAD
             Create Project
+=======
+            New Project
+>>>>>>> upstream/main
           </button>
         </div>
       </div>
@@ -482,8 +497,23 @@ function ProjectsPage() {
       </div>
 
       <div>
+<<<<<<< HEAD
         <h2 className="text-2xl font-bold mb-6">Explore Projects</h2>
         {/* Remove SearchBar and FilterBar from here */}
+=======
+        <div className="flex flex-col md:flex-row gap-4 mb-8">
+          <h2 className="text-2xl font-bold">Explore Projects</h2>
+          <SearchBar placeholder="Search projects..." />
+          <FilterBar 
+            options={{
+              levels: ['beginner', 'intermediate', 'advanced'],
+              categories: ['frontend', 'backend', 'fullstack', 'mobile'],
+              sortOptions: ['newest', 'popular']
+            }}
+          />
+        </div>
+
+>>>>>>> upstream/main
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map(project => (
             <div key={project.id} className="card hover:shadow-lg transition-all duration-300">
@@ -696,6 +726,7 @@ function ProjectsPage() {
 
                 <div>
                   <label htmlFor="tags" className="block text-sm font-medium mb-1">
+<<<<<<< HEAD
                     Tags (click to add or type and press Enter)
                   </label>
                   <div className="flex flex-wrap gap-2 mb-2">
@@ -723,13 +754,21 @@ function ProjectsPage() {
                       );
                     })}
                   </div>
+=======
+                    Tags (Press Enter to add)
+                  </label>
+>>>>>>> upstream/main
                   <input
                     type="text"
                     id="tags"
                     onKeyDown={handleTagInput}
                     className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500"
+<<<<<<< HEAD
                     placeholder="Type and press Enter to add custom tag"
                     autoComplete="off"
+=======
+                    placeholder="e.g., React, TypeScript"
+>>>>>>> upstream/main
                   />
                   <div className="flex flex-wrap gap-2 mt-2">
                     {projectForm.tags.map(tag => (
