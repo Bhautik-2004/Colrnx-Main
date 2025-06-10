@@ -23,14 +23,14 @@ export function useAdmin() {
         .from('admin_users')
         .select('id')
         .eq('email', user.email)
-        .eq('is_active', true)
-        .single();
+        .eq('is_active', true);
 
-      if (error && error.code !== 'PGRST116') {
+      if (error) {
         console.error('Error checking admin status:', error);
+        setIsAdmin(false);
+      } else {
+        setIsAdmin(data && data.length > 0);
       }
-
-      setIsAdmin(!!data);
     } catch (error) {
       console.error('Error checking admin status:', error);
       setIsAdmin(false);
