@@ -13,7 +13,11 @@ import AILearningPage from './pages/AILearningPage';
 import PortfolioPage from './pages/PortfolioPage';
 import ProfilePage from './pages/ProfilePage';
 import AchievementsPage from './pages/AchievementsPage';
+import AdminDashboardPage from './pages/AdminDashboardPage';
+import AdminResourcesPage from './pages/AdminResourcesPage';
+import AdminAddResourcePage from './pages/AdminAddResourcePage';
 import ProtectedRoute from './components/auth/ProtectedRoute';
+import AdminRoute from './components/admin/AdminRoute';
 import { useTheme } from './context/ThemeContext';
 import FeaturesPage from './pages/FeaturesPage';
 import PricingPage from './pages/PricingPage';
@@ -93,6 +97,35 @@ function App() {
         <Route path="/profile" element={
           <ProtectedRoute>
             <ProfilePage />
+          </ProtectedRoute>
+        } />
+        {/* Admin Routes */}
+        <Route path="/admin" element={
+          <ProtectedRoute>
+            <AdminRoute>
+              <AdminDashboardPage />
+            </AdminRoute>
+          </ProtectedRoute>
+        } />
+        <Route path="/admin/resources" element={
+          <ProtectedRoute>
+            <AdminRoute>
+              <AdminResourcesPage />
+            </AdminRoute>
+          </ProtectedRoute>
+        } />
+        <Route path="/admin/resources/add" element={
+          <ProtectedRoute>
+            <AdminRoute>
+              <AdminAddResourcePage />
+            </AdminRoute>
+          </ProtectedRoute>
+        } />
+        <Route path="/admin/resources/edit/:id" element={
+          <ProtectedRoute>
+            <AdminRoute>
+              <AdminAddResourcePage />
+            </AdminRoute>
           </ProtectedRoute>
         } />
       </Routes>

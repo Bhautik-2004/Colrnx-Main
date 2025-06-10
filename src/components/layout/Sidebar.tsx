@@ -5,6 +5,7 @@ import {
   Settings, LogOut, GraduationCap, Trophy
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
+import { useAdmin } from '../../hooks/useAdmin';
 
 interface SidebarProps {
   onToggle: (collapsed: boolean) => void;
@@ -14,6 +15,7 @@ function Sidebar({ onToggle }: SidebarProps) {
   const location = useLocation();
   const navigate = useNavigate();
   const { logout } = useAuth();
+  const { isAdmin } = useAdmin();
   const [isCollapsed, setIsCollapsed] = useState(true);
   
   const isActive = (path: string) => location.pathname === path;
@@ -249,6 +251,22 @@ function Sidebar({ onToggle }: SidebarProps) {
             );
           })}
 
+          {/* Admin Dashboard Link */}
+          {isAdmin && (
+            <Link
+              to="/admin"
+              className={`nav-item flex items-center px-4 py-3 text-sm font-medium rounded-full transition-colors ${
+                isActive('/admin')
+                  ? 'bg-red-50 dark:bg-red-900/30 text-red-500'
+                  : 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-border'
+              }`}
+            >
+              <Shield className="w-5 h-5 flex-shrink-0" />
+              <span className={`ml-3 truncate transition-opacity duration-300 ${isCollapsed ? 'opacity-0' : 'opacity-100'}`}>
+                Admin Panel
+              </span>
+            </Link>
+          )}
           {/* Achievements Link */}
           <Link
             to="/achievements"
