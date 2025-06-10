@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Plus, Search, Filter, Edit, Trash2, Eye, Star, 
-  Clock, Users, BookOpen, Video, FileText, Tool
-} from 'lucide-react';
+import { Plus, Search, Filter, Edit, Trash2, Eye, Star, Clock, Users, BookOpen, Video, FileText, PenTool as Tool } from 'lucide-react';
 import DashboardLayout from '../components/layout/DashboardLayout';
 import { supabase } from '../lib/supabase';
 import { toast } from 'sonner';
