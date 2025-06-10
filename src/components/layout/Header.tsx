@@ -36,7 +36,6 @@ function Header() {
             <Link 
               to="/pricing" 
               className="px-4 py-2 rounded-xl text-[#5164E1] dark:text-[#A7D1F1] hover:bg-[#A7D1F1]/20 dark:hover:bg-[#5164E1]/20 hover:text-[#5164E1] dark:hover:text-[#A7D1F1] transition-all duration-300 transform hover:scale-105 font-medium hover:rounded-full"
-              className="px-4 py-2 rounded-xl text-[#5164E1] dark:text-[#A7D1F1] hover:bg-[#A7D1F1]/20 dark:hover:bg-[#5164E1]/20 hover:text-[#5164E1] dark:hover:text-[#A7D1F1] transition-all duration-300 transform hover:scale-105 font-medium"
             >
               Pricing
             </Link>
