@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { 
   BookOpen, Users, Code, Layout, BookOpenCheck, Brain, 
-  Settings, LogOut, GraduationCap, Trophy
+  Settings, LogOut, GraduationCap, Trophy, Shield
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { useAdmin } from '../../hooks/useAdmin';
@@ -315,5 +315,3 @@ function Sidebar({ onToggle }: SidebarProps) {
 }
 
 export default Sidebar;
-
-export default Sidebar
