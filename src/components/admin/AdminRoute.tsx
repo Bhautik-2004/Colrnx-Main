@@ -14,7 +14,7 @@ function AdminRoute({ children }: AdminRouteProps) {
   }
 
   if (!isAdmin) {
-    return <Navigate to="/learn" replace />;
+    return <Navigate to="/learn\" replace />;
   }
 
   return <>{children}</>;
