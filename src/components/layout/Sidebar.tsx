@@ -210,11 +210,7 @@ function Sidebar({ onToggle }: SidebarProps) {
                 <Link
                   key={item.path}
                   to={item.path}
-<<<<<<< HEAD
                   className={`nav-item ai-assistant-btn flex items-center px-4 py-3 text-sm font-medium rounded-full transition-all duration-300 ${
-=======
-                  className={`nav-item ai-assistant-btn flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 ${
->>>>>>> upstream/main
                     active
                       ? 'active text-violet-700 dark:text-white font-bold'
                       : 'text-gray-700 dark:text-gray-200 hover:bg-gradient-to-r hover:from-violet-500/10 hover:to-purple-500/10'
@@ -239,11 +235,7 @@ function Sidebar({ onToggle }: SidebarProps) {
               <Link
                 key={item.path}
                 to={item.path}
-<<<<<<< HEAD
                 className={`nav-item flex items-center px-4 py-3 text-sm font-medium rounded-full transition-colors ${
-=======
-                className={`nav-item flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
->>>>>>> upstream/main
                   active
                     ? 'bg-primary-50 dark:bg-primary-900/30 text-primary-500'
                     : 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-border'
@@ -260,11 +252,7 @@ function Sidebar({ onToggle }: SidebarProps) {
           {/* Achievements Link */}
           <Link
             to="/achievements"
-<<<<<<< HEAD
             className={`nav-item flex items-center px-4 py-3 text-sm font-medium rounded-full transition-colors ${
-=======
-            className={`nav-item flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
->>>>>>> upstream/main
               isActive('/achievements')
                 ? 'bg-primary-50 dark:bg-primary-900/30 text-primary-500'
                 : 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-border'
@@ -279,11 +267,7 @@ function Sidebar({ onToggle }: SidebarProps) {
           {/* Settings Link */}
           <Link
             to="/profile"
-<<<<<<< HEAD
             className={`nav-item flex items-center px-4 py-3 text-sm font-medium rounded-full transition-colors ${
-=======
-            className={`nav-item flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
->>>>>>> upstream/main
               isActive('/profile')
                 ? 'bg-primary-50 dark:bg-primary-900/30 text-primary-500'
                 : 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-border'
@@ -299,11 +283,7 @@ function Sidebar({ onToggle }: SidebarProps) {
           {/* Sign Out Button */}
           <button
             onClick={handleLogout}
-<<<<<<< HEAD
             className="nav-item w-full flex items-center px-4 py-3 text-sm font-medium rounded-full text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 transition-colors"
-=======
-            className="nav-item w-full flex items-center px-4 py-3 text-sm font-medium rounded-lg text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 transition-colors"
->>>>>>> upstream/main
           >
             <LogOut className="w-5 h-5 flex-shrink-0" />
             <span className={`ml-3 truncate transition-opacity duration-300 ${isCollapsed ? 'opacity-0' : 'opacity-100'}`}>

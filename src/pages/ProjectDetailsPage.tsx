@@ -400,11 +400,7 @@ function ProjectDetailsPage() {
             {project.tags?.map(tag => (
               <span
                 key={tag}
-<<<<<<< HEAD
                 className="bg-gray-100 dark:bg-dark-border text-gray-800 dark:text-gray-200 px-2 py-1 rounded-full text-sm"
-=======
-                className="bg-gray-100 dark:bg-dark-border text-gray-800 dark:text-gray-200 px-2 py-1 rounded-md text-sm"
->>>>>>> upstream/main
               >
                 {tag}
               </span>
@@ -516,11 +512,7 @@ function ProjectDetailsPage() {
                 {resources.map(resource => (
                   <div
                     key={resource.id}
-<<<<<<< HEAD
                     className="flex items-start gap-4 p-3 rounded-full hover:bg-gray-50 dark:hover:bg-dark-border transition-colors"
-=======
-                    className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-border transition-colors"
->>>>>>> upstream/main
                   >
                     {resource.type === 'document' ? (
                       <FileText className="w-5 h-5 text-primary-500" />
@@ -583,11 +575,7 @@ function ProjectDetailsPage() {
       {/* Edit Project Modal */}
       {isEditModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-<<<<<<< HEAD
           <div className="bg-white dark:bg-dark-card dark:text-gray-100 rounded-xl shadow-xl w-full max-w-2xl mx-4 p-6 border border-gray-200 dark:border-dark-border">
-=======
-          <div className="bg-white dark:bg-gray-900 dark:text-gray-100 rounded-xl shadow-xl w-full max-w-2xl mx-4 p-6 border border-gray-200 dark:border-gray-700">
->>>>>>> upstream/main
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-bold">Edit Project</h2>
               <button
@@ -605,11 +593,7 @@ function ProjectDetailsPage() {
                   type="text"
                   value={editForm.title}
                   onChange={(e) => setEditForm({ ...editForm, title: e.target.value })}
-<<<<<<< HEAD
                   className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
-=======
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
->>>>>>> upstream/main
                   required
                 />
               </div>
@@ -631,11 +615,7 @@ function ProjectDetailsPage() {
                   <select
                     value={editForm.status}
                     onChange={(e) => setEditForm({ ...editForm, status: e.target.value })}
-<<<<<<< HEAD
                     className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
-=======
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
->>>>>>> upstream/main
                   >
                     <option value="planning">Planning</option>
                     <option value="development">Development</option>
@@ -649,11 +629,7 @@ function ProjectDetailsPage() {
                   <select
                     value={editForm.difficulty}
                     onChange={(e) => setEditForm({ ...editForm, difficulty: e.target.value })}
-<<<<<<< HEAD
                     className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
-=======
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
->>>>>>> upstream/main
                   >
                     <option value="beginner">Beginner</option>
                     <option value="intermediate">Intermediate</option>
@@ -669,11 +645,7 @@ function ProjectDetailsPage() {
                     type="date"
                     value={editForm.start_date.split('T')[0]}
                     onChange={(e) => setEditForm({ ...editForm, start_date: e.target.value })}
-<<<<<<< HEAD
                     className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
-=======
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
->>>>>>> upstream/main
                   />
                 </div>
 
@@ -683,11 +655,7 @@ function ProjectDetailsPage() {
                     type="date"
                     value={editForm.target_completion_date.split('T')[0]}
                     onChange={(e) => setEditForm({ ...editForm, target_completion_date: e.target.value })}
-<<<<<<< HEAD
                     className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
-=======
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
->>>>>>> upstream/main
                   />
                 </div>
               </div>
@@ -712,11 +680,7 @@ function ProjectDetailsPage() {
       {/* Add Resource Modal */}
       {isResourceModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-<<<<<<< HEAD
           <div className="bg-white dark:bg-dark-card dark:text-gray-100 rounded-xl shadow-xl w-full max-w-2xl mx-4 p-6 border border-gray-200 dark:border-dark-border">
-=======
-          <div className="bg-white dark:bg-gray-900 dark:text-gray-100 rounded-xl shadow-xl w-full max-w-2xl mx-4 p-6 border border-gray-200 dark:border-gray-700">
->>>>>>> upstream/main
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-bold">Add Resource</h2>
               <button
@@ -734,11 +698,7 @@ function ProjectDetailsPage() {
                   type="text"
                   value={resourceForm.title}
                   onChange={(e) => setResourceForm({ ...resourceForm, title: e.target.value })}
-<<<<<<< HEAD
                   className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none placeholder-gray-400 dark:placeholder-gray-500"
-=======
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none placeholder-gray-400 dark:placeholder-gray-500"
->>>>>>> upstream/main
                   required
                 />
               </div>
@@ -758,11 +718,7 @@ function ProjectDetailsPage() {
                 <select
                   value={resourceForm.type}
                   onChange={(e) => setResourceForm({ ...resourceForm, type: e.target.value as 'document' | 'link' | 'forum' })}
-<<<<<<< HEAD
                   className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
-=======
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
->>>>>>> upstream/main
                 >
                   <option value="document">Document</option>
                   <option value="link">Link</option>
@@ -776,11 +732,7 @@ function ProjectDetailsPage() {
                   type="url"
                   value={resourceForm.url}
                   onChange={(e) => setResourceForm({ ...resourceForm, url: e.target.value })}
-<<<<<<< HEAD
                   className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none placeholder-gray-400 dark:placeholder-gray-500"
-=======
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none placeholder-gray-400 dark:placeholder-gray-500"
->>>>>>> upstream/main
                   placeholder="https://"
                 />
               </div>
@@ -805,11 +757,7 @@ function ProjectDetailsPage() {
       {/* Add Update Modal */}
       {isUpdateModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-<<<<<<< HEAD
           <div className="bg-white dark:bg-dark-card dark:text-gray-100 rounded-xl shadow-xl w-full max-w-2xl mx-4 p-6 border border-gray-200 dark:border-dark-border">
-=======
-          <div className="bg-white dark:bg-gray-900 dark:text-gray-100 rounded-xl shadow-xl w-full max-w-2xl mx-4 p-6 border border-gray-200 dark:border-gray-700">
->>>>>>> upstream/main
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-bold">Add Timeline Update</h2>
               <button
@@ -826,11 +774,7 @@ function ProjectDetailsPage() {
                 <select
                   value={updateForm.phase}
                   onChange={(e) => setUpdateForm({ ...updateForm, phase: e.target.value as Timeline['phase'] })}
-<<<<<<< HEAD
                   className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
-=======
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
->>>>>>> upstream/main
                 >
                   <option value="planning">Planning</option>
                   <option value="development">Development</option>
@@ -868,11 +812,7 @@ function ProjectDetailsPage() {
                             : prev.end_date,
                       }));
                     }}
-<<<<<<< HEAD
                     className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
-=======
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
->>>>>>> upstream/main
                   />
                 </div>
 
@@ -883,11 +823,7 @@ function ProjectDetailsPage() {
                     value={updateForm.end_date}
                     min={updateForm.start_date || undefined}
                     onChange={(e) => setUpdateForm({ ...updateForm, end_date: e.target.value })}
-<<<<<<< HEAD
                     className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
-=======
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
->>>>>>> upstream/main
                   />
                 </div>
               </div>
@@ -897,11 +833,7 @@ function ProjectDetailsPage() {
                 <select
                   value={updateForm.status}
                   onChange={(e) => setUpdateForm({ ...updateForm, status: e.target.value as Timeline['status'] })}
-<<<<<<< HEAD
                   className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-full bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
-=======
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg bg-white dark:bg-dark-bg focus:outline-none focus:ring-2 focus:ring-primary-500 resize-none"
->>>>>>> upstream/main
                 >
                   <option value="pending">Pending</option>
                   <option value="in_progress">In Progress</option>
