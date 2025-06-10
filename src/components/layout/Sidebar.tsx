@@ -315,3 +315,5 @@ function Sidebar({ onToggle }: SidebarProps) {
 }
 
 export default Sidebar;
+
+export default Sidebar
