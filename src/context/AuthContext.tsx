@@ -20,9 +20,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const handleLogout = async () => {
     try {
       await supabase.auth.signOut();
-    } catch (error) {
+    } catch (error: any) {
       // Ignore session_not_found errors as they're expected when session is already expired
-      if (error.message && !error.message.includes('session_not_found')) {
+      if (error?.message && !error.message.includes('session_not_found')) {
         console.error('Error during logout:', error);
       }
     } finally {
@@ -78,8 +78,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         email,
         password,
       });
-      if (error) throw error;
-    } catch (error) {
+      if (error) {
+        // Enhance error message for better user experience
+        let enhancedError = error;
+        if (error.message === 'Invalid login credentials') {
+          enhancedError = new Error('Invalid email or password. Please check your credentials and try again.');
+        }
+        throw enhancedError;
+      }
+    } catch (error: any) {
       console.error('Error during login:', error);
       throw error;
     } finally {
@@ -100,7 +107,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         },
       });
       if (error) throw error;
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error during signup:', error);
       throw error;
     } finally {

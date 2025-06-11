@@ -1,6 +1,6 @@
 import { useState, FormEvent, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Brain, Github, Linkedin, Mail, Lock, Eye, EyeOff } from 'lucide-react';
+import { Brain, Github, Linkedin, Mail, Lock, Eye, EyeOff, AlertCircle } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { toast } from "sonner";
 
@@ -49,8 +49,27 @@ function SignInPage() {
       await login(email, password);
       toast.success("Sign in successful!");
       // redirect handled by useEffect
-    } catch {
-      toast.error("Sign in failed!");
+    } catch (error: any) {
+      console.error('Login error:', error);
+      
+      // Handle specific error messages
+      let errorMessage = 'Sign in failed. Please try again.';
+      
+      if (error?.message) {
+        if (error.message.includes('Invalid login credentials') || 
+            error.message.includes('invalid_credentials')) {
+          errorMessage = 'Invalid email or password. Please check your credentials and try again.';
+        } else if (error.message.includes('Email not confirmed')) {
+          errorMessage = 'Please check your email and confirm your account before signing in.';
+        } else if (error.message.includes('Too many requests')) {
+          errorMessage = 'Too many login attempts. Please wait a moment before trying again.';
+        } else if (error.message.includes('Network')) {
+          errorMessage = 'Network error. Please check your connection and try again.';
+        }
+      }
+      
+      setError(errorMessage);
+      toast.error(errorMessage);
     } finally {
       setIsSubmitting(false);
     }
@@ -76,8 +95,17 @@ function SignInPage() {
           {/* Form */}
           <div className="bg-white dark:bg-dark-card rounded-xl shadow-xl p-8">
             {error && (
-              <div className="bg-red-50 dark:bg-red-900/20 text-red-500 p-3 rounded-lg mb-6">
-                {error}
+              <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-400 p-4 rounded-lg mb-6 flex items-start space-x-3">
+                <AlertCircle className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                <div className="flex-1">
+                  <p className="text-sm font-medium">{error}</p>
+                  {error.includes('Invalid email or password') && (
+                    <div className="mt-2 text-xs">
+                      <p>Don't have an account? <Link to="/signup" className="text-primary-500 hover:text-primary-600 font-medium">Sign up here</Link></p>
+                      <p>Forgot your password? <Link to="/forgot-password" className="text-primary-500 hover:text-primary-600 font-medium">Reset it here</Link></p>
+                    </div>
+                  )}
+                </div>
               </div>
             )}
             
